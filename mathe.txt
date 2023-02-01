@@ -1,0 +1,148 @@
+"Definition 4.1 Metrik":"
+1. Positivität
+2. Symmetrie
+3. Dreiecksungleichung: $||x+y|| <= ||x|| + ||y||$"
+
+"Definition 4.2 Norm":"
+1. Positivität
+2. Absolute Homogenität: $||ax|| = |a| * ||x||$
+3. Dreiecksungleichung: $||x+y|| <= ||x|| + ||y||$"
+
+"Satz 4.3 Normierter Raum":"
+Ist $(X, ||.||)$ ein normierter Raum, dann ist d mit 
+$d(x, y) = ||x - y||$ eine Metrik auf X."
+
+"p-Norm":"
+$||x|| = \sqrt[n]{\sum_{i=1}^{n} |x|^n}$
+n=2 heißt euklidische Norm
+n=1 heißt absulute Norm
+n=$\infty$ heißt Maximumsnorm"
+
+"Definition 4.4 Äquivalenz von Metriken/Normen":"
+Zwei Metriken/Normen $d_1, d_2$ heißen äquivalent, wenn $\exists a, b: ad_1 \le d_2 \ge bd_1$
+
+"Definition 4.5 $\epsilon$-Umgebung":"
+$U_{\epsilon}(y_1) = \{y_2 \in Y: d(y_1, y_2) < \epsilon\}$"
+
+"Definition 4.6 Offen/Abgeschlossene metrische Räume":"
+Sei $(S, d)$ ein metrischer Raum und $X \subset S$. M heißt offen, wenn für alle $x \in X$
+eine $\epsilon$-Umgebung $U_{\epsilon} \subset X$ existiert (wobei $\epsilon$ von x abhängen kann).
+M heißt abgeschlossen, wenn $S \setminus M$ offen ist.
+Sei $X = \mathbb{R}$ und $a < b \in \mathbb{R}$, dann ist das Intervall [a, b] abgeschlossen und das Intervall
+(a, b) offen. Die Intervalle [a, b) beziehungsweise (a, b] sind weder abgeschlossen noch offen."
+
+"Definition 4.7 Beschränktheit":"
+Sei $(X, d)$ ein metrischer Raum. Eine Teilmenge $M \subset X$ heißt beschränkt, falls für alle $x \in M$ eine Umgebung
+$U_{\epsilon}(z)$ existiert mit $z \in M$ und $\omega \in \mathbb{R}$, so dass
+$M \subset U_{\epsilon}(z)$,
+also $d(x, z) < \omega$ für alle $x \in M$.
+M heißt abgeschlossen, wenn $S \setminus M$ offen ist.
+Sei $X = \mathbb{R}$ und $a < b \in \mathbb{R}$, dann ist das Intervall [a, b] abgeschlossen und das Intervall
+(a, b) offen. Die Intervalle [a, b) beziehungsweise (a, b] sind weder abgeschlossen noch offen."
+
+"Definition 4.8 Folge":"
+Sei (X, d) ein metrischer Raum. Eine Menge $\{x_n | n \in \mathbb{N}\} \subset X$ heißt Folge.
+Wir schreiben auch einfach (xn) für eine Folge."
+
+"Definition 4.9 Grenzwert/Konvergenz":
+Sei X ein metrischer Raum und $(x_n)$ eine Folge in X. $(x_n)$ heißt konvergent
+mit Grenzwert x, wenn
+$\forall \epsilon > 0 \space \exists n_0 > 0 \in \mathbb{N} \space \forall n \ge n_0: d(x_n, x) < \epsilon$.
+Wir schreiben
+$\lim_{n \to \infty}$, $x_n = x$ mit $n \to \infty$, oder auch $x_n \xrightarrow{n \to \infty} x$"
+
+"Definition 4.10 Cauchy-Folge":"
+Eine Folge $(x_n)$ in einem metrischen Raum $(X, d)$ heisst Cauchy-Folge, wenn
+$\forall \epsilon > 0 \space \exists n_0 \in \mathbb{N} \space \forall m, n \ge n_0 : d(x_n, x_m) < \epsilon$."
+
+"Definition 4.12 Vollständigkeit":"
+Ein metrischer Raum (X, d) heisst vollständig, wenn jede Cauchy-Folge in X konvergiert."
+
+"Satz 4.13 Vollständigkeit":"
+Die reellen Zahlen R mit der Betragsmetrik d(x, y ) = $|x − y |$ sind ein vollständiger
+metrischer Raum."
+
+"Definition 4.14":"
+Sei (X, d) ein metrischer Raum. Eine Folge $(x_n) \subset X$ heißt beschränkt wenn
+sie als Teilmenge gemäß Definition 4.7 beschränkt ist, also ein $\omega \in \mathbb{R}$ und ein $z \in X$ existiert,
+sodass
+$d(x_n, z) \le \omega, ∀n ∈ \mathbb{N}$.
+Ist auf X eine Ordnungsrelation definiert, so nennen wir $(x_n)$ nach unten/nach oben beschränkt,
+falls eine $(x_n)$ eine untere/obere Schranke besitzt."
+
+"Lemma 4.16":"
+Sei $(x_n) \subset \mathbb{R}$ monoton wachsend(fallend) und nach oben(nach unten) beschränkt.
+Dann konvergiert $(x_n)$."
+
+"Lemma 4.17":"
+Die Folge $(x_n)$ im metrischen Raum (X, d) konvergiert genau dann gegen x, wenn
+$d(xn, x) \xrightarrow{n \to \infty} 0$,
+also wenn $d(x_n, x)$ eine Nullfolge in $\mathbb{R}$ ist.
+
+"Satz 4.18":"
+Für $n \in \mathbb{N}$ ist $\mathbb{R}^n$ mit der durch die Euklidischen Norm definierten Metrik vollständig.
+
+"Korollar 4.19":"
+Sei $(x_n)$ eine Folge im Raum $\mathbb{R^N}$. Dann ist äquivalent:
+1. $x_n \xrightarrow{n \to \infty} x$ bezüglich der euklidischen Norm, also
+    $||x_n - x||_2 \to 0$ mit $n \to \infty$
+2. Alle Koordinatenfolgen $x_n^{(i)} \in \mathbb{R}$ konvergieren, also
+    $|x_n^{(i)} - x^{(i)} \to 0$ mit $n \to \infty$
+3. $x_n \xrightarrow{n \to \infty} x$ bezüglich einer beliebigen Norm, also
+    $||x_n - x|| \to 0$ mit $n \to \infty$."
+
+"Definition 4.20":"
+Sei $K : \mathbb{N} \to \mathbb{N}$ eine streng monoton wachsende Abbildung ($K(i) > K(j) für i > j$).
+Dann heißt $(x_{K(n)})_{n∈N}$ Teilfolge von $(x_n)$."
+
+"Definition 4.21":"
+Sei (X, d) ein metrischer Raum. Dann heißt $y \in X$ Häufungspunkt der Folge
+$(x_n) \subset X$, wenn in jeder noch so kleinen Umgebung von y unendlich viele Folgenglieder liegen:
+$\forall \epsilon > 0, m \in \mathbb{N} \space \exists n > m : d(x_n, y) < \epsilon$."
+
+"Satz 4.22":"
+Sei (X, d) ein metrischer Raum und $(x_n)$ eine Folge in X. Dann gilt:
+(i) Ist xn konvergent gegen $x \in X$, dann ist x der einzige Häufungspunkt von $(x_n)$.
+(ii) Ist y Häufungspunkt von $(x_n)$, dann existiert eine konvergente Teilfolge $(x_{n_k})$ mit Grenzwert y und umgekehrt."
+
+"Lemma 4.23":"
+Sei $x_n$ eine Folge mit Häufungspunkt z und $y_n$ eine konvergente Folge mit Grenzwert y.
+Dann ist z + y ein Häufungswert von $x_n + y_n$."
+
+"Satz 4.24 (Bolzano-Weierstrass)":"
+Sei $(x_n) \subset \mathbb{R^N}$ eine beschränkte Folge, d.h. es gibt $C \exists \mathbb{R}$ mit
+$||x_n \le C$ für alle $n \in \mathbb{N}$. Dann existiert eine konvergente Teilfolge $(x_{n_k})$
+mit Grenzwert y und es gilt $||y|| \le C$."
+
+"Definition 4.25 Reihen":"
+Sei $(X, ||.||)$ ein normierter Vektorraum und $(x_n)$ eine Folge in X. Dann nennen wir die Folge der Partialsummen
+$(s_n) = (\sum_{k=0}^{n} x_k )$
+eine Reihe und bezeichnen sie mit
+$s = (\sum\nolimits_{k=0}^{\infty} x_k )$.
+Falls die Folge $s_n$ gegen einen Grenzwert $s \in X$ konvergiert, so schreiben wir
+$s = \sum_{k=0}^{\infty}x_k$
+und nennen die Reihe konvergent. Andernfalls nennen wir die Reihe divergent."
+
+"Beispiel 4.25.1 Geometrische Reihe":"
+Für $q \in \mathbb{R}$ betrachten wir die geometrische Reihe
+$s_n = \sum_{k=0}^n q^k$.
+Für $q = 1$ gilt $s_n = n + 1$ und die Reihe ist divergent. Für $q \ne 1$ gilt
+$s_n = \frac{1-q^n}{1-q}$.
+Nun sehen wir, dass für $|q| < 1$ gilt $q^n \to 0$ für $n \to 0$, also erhalten wir den Grenzwert
+$s = \sum_{k=0}^{infty} q^k = \frac{1}{1-q}$."
+
+"Satz 4.26 (Cauchy-Kriterium)":"
+Eine Reihe in einem vollständigen metrischen Raum konvergiert
+genau dann, wenn es für alle $\epsilon > 0$ ein $n_0 \in \mathbb{N}$ gibt, sodass
+$\forall m > n \ge n_0: || \sum_{k=n+1}^{m} x_k \space || < \epsilon$."
+
+"Definition 4.27":"
+Sei X ein vollständiger normierter Raum und $(x_n)$ eine Folge in X. Dazu sei
+$(c_n)$ eine Folge in $\mathbb{R}$ mit $c_n \ge 0$ für alle $n \in \mathbb{N}$, sodass für alle $n \in \mathbb{N}$ gilt:
+$||x_n \le c_n$.
+Dann heisst $(c_n)$ bzw. $\sum\nolimits_{n=0}^{\infty}c_n$ Majorante von $(x_n)$ bzw. $\sum\nolimits_{n=0}^{\infty}xn$
+n=0 xn."
+
+"Satz 4.28 (Majorantenkriterium)":"
+Sei X ein vollständiger normierter Raum und $(c_n)$ eine Majorante von $(x_n)$.
+Falls $\sum_{n=0}^{\infty} c_n$ konvergiert, dann konvergiert auch $\sum_{n=0}^{\infty} x_n$.
